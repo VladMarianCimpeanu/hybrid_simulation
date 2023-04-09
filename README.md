@@ -15,10 +15,10 @@ Experiments for the hybrid simulation tool in a merge scenario with very high tr
 
 The hybrid simulation tested on the following software
 
-* Ubuntu 18.04
-* ROS Melodic
-* Gazebo version 9.0.0
-* SUMO Version 0.32.0
+* Ubuntu 20.04
+* ROS Noetic
+* Gazebo version 11.0.0
+* SUMO Version 1.16.0
 
 All of them can be installed using the standard installation process.
 
