@@ -9,6 +9,7 @@ from __future__ import print_function
 import optparse
 import os
 import sys
+import copy
 from math import radians
 
 
@@ -58,8 +59,8 @@ def publish_tf_timer_callback(event):
     vehicles_msg_array = VehicleStatusArray()
     vehicles_msg_array.header.stamp = rospy.Time.now()
     vehicles_msg_array.header.frame_id = "world"
-
-    for running_vehicle, subs in traci.vehicle.getAllSubscriptionResults().items():
+    copy_sub_results = traci.vehicle.getAllSubscriptionResults()
+    for running_vehicle, subs in copy_sub_results.items():
         if running_vehicle is not None:
             try:
                 result_sub = traci.vehicle.getSubscriptionResults(running_vehicle)
